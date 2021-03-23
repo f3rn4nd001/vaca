@@ -3,12 +3,8 @@ import React, { useState }  from 'react'
         let [contador ,setContado] = useState(0);
         
         const onChangeMas = (a)=>{
-            if (a) {
-                setContado(contador ++);
-            }
-            else{
-                setContado(contador --);
-            }
+           
+                 ( a ? setContado(contador ++) : setContado(contador --)); 
         } 
 
         return (
