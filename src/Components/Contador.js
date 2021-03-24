@@ -1,11 +1,14 @@
-import React, { useState }  from 'react'
+import React, { useState,useEffect }  from 'react'
     const Contador=()=>{
         let [contador ,setContado] = useState(0);
         
-        const onChangeMas = (a)=>{
-           
+        const onChangeMas = (a)=>{     
                  ( a ? setContado(contador ++) : setContado(contador --)); 
         } 
+        useEffect(() => {
+            console.log('contador :' +contador);
+            
+        })
 
         return (
             <div>
@@ -15,4 +18,4 @@ import React, { useState }  from 'react'
           </div>
         )
     }
-    export default Contador;
+export default Contador;
